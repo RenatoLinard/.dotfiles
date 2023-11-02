@@ -13,13 +13,15 @@
 ## Passo 3: Conecte-se à rede Wi-Fi
 
 - Após a inicialização, ative a conexão Wi-Fi com os seguintes comandos:
-  ```bash
+
+  ```shell
   iwctl
   device list
   adapter [nome_do_adaptador] set-property Powered on
   station wlan0 show
   station wlan0 scan
-  station wlan0 connect [nome_da_rede]```
+  station wlan0 connect [nome_da_rede]
+  ```
   Digite a senha da rede Wi-Fi quando solicitado e pressione "Enter" para conectar.
 
 ## Passo 4: Saia do utilitário iwctl
