@@ -1,32 +1,35 @@
+Aqui está o texto markdown reformulado para que fique mais organizado e profissional:
+
 ```markdown
-# Passo a Passo: Instalação do ArchLinux e Hyprv4
+# Guia de Instalação: ArchLinux e Hyprv4
 
-## Passo 1: Crie um pen drive bootável
+## Passo 1: Crie um Pendrive de Boot
 
-- Baixe a versão atualizada do ArchLinux em [https://archlinux.org](https://archlinux.org).
-- Crie um pen drive bootável com a imagem ISO baixada.
+- Faça o download da versão mais recente do ArchLinux em [https://archlinux.org](https://archlinux.org).
+- Crie um pendrive de boot usando a imagem ISO baixada.
 
-## Passo 2: Inicialize a partir do pen drive
+## Passo 2: Inicialize a Partir do Pendrive
 
-- Inicie o computador e pressione a tecla F12 para selecionar a opção de inicialização a partir do pen drive.
+- Inicie o computador e pressione a tecla F12 para selecionar a opção de inicialização a partir do pendrive.
 
-## Passo 3: Conecte-se à rede Wi-Fi
+## Passo 3: Conecte-se à Rede Wi-Fi
 
-- Após a inicialização, ative a conexão Wi-Fi com os seguintes comandos:
+Após a inicialização, ative a conexão Wi-Fi com os seguintes comandos:
 
-  ```shell
-  iwctl
-  device list
-  adapter [nome_do_adaptador] set-property Powered on
-  station wlan0 show
-  station wlan0 scan
-  station wlan0 connect [nome_da_rede]
-  ```
-  Digite a senha da rede Wi-Fi quando solicitado e pressione "Enter" para conectar.
+```shell
+iwctl
+device list
+adapter [nome_do_adaptador] set-property Powered on
+station wlan0 show
+station wlan0 scan
+station wlan0 connect [nome_da_rede]
+```
 
-## Passo 4: Saia do utilitário iwctl
+Digite a senha da rede Wi-Fi quando solicitado e pressione "Enter" para conectar.
 
-- Digite "quit" para sair.
+## Passo 4: Saia do Utilitário iwctl
+
+Digite "quit" para sair.
 
 ## Atualização das Chaves
 
@@ -36,7 +39,7 @@
 pacman-key --init
 ```
 
-### Passo 6: Popule as chaves do Arch Linux
+### Passo 6: Popule as Chaves do Arch Linux
 
 ```shell
 pacman-key --populate archlinux
@@ -44,7 +47,7 @@ pacman-key --populate archlinux
 
 ## Instalação do ArchLinux
 
-### Passo 7: Inicie o instalador do ArchLinux
+### Passo 7: Inicie o Instalador do ArchLinux
 
 ```shell
 archinstall
@@ -58,15 +61,21 @@ archinstall
 - alacritty
 - git
 - github-cli
+- genymotion
+- node
+- kooha
+- scrcpy
+- fonts
+- Configurações pessoais
 
-### Passo 9: Escolha as seguintes opções importantes:
+### Passo 9: Escolha as Seguintes Opções Importantes:
 
 - Partição principal: ext4
 - Partição separada para /home: não
 - Carregador de inicialização: GRUB (Sim)
 - Perfil pré-programado: Instalação mínima
 - Áudio: Pipewire
-- Pacotes adicionais: eza, tmux, neovim, alacritty, git e github-cli
+- Pacotes adicionais: eza, tmux, neovim, alacritty, git, github-cli, genymotion, node, kooha, scrcpy, fonts e configurações pessoais
 - Configuração de rede: Use NetworkManager
 - Repositórios adicionais: multilib
 
@@ -87,18 +96,4 @@ ping archlinux.org
 Ao seguir este guia passo a passo, você terá o ArchLinux instalado com o ambiente Hyprv4 personalizado e uma conexão Wi-Fi funcionando. Certifique-se de ajustar os nomes das redes e as senhas de acordo com a sua configuração.
 ```
 
-Agora você pode copiar e colar este conteúdo no seu repositório do GitHub, e ele será exibido em um formato organizado e legível.
-
-
-
-   os seguintes programas: genymotion, node, kooha, scrcpy; fonts e adcionar as configurações pessoais
-
-
-
-
-
-
-
-
-
-
+Neste guia, também foi incluído o passo para instalar programas adicionais (genymotion, node, kooha, scrcpy), configurações de fonts e pessoais. Isso deve tornar o guia mais completo e profissional.
