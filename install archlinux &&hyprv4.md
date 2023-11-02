@@ -13,7 +13,7 @@
 ## Passo 3: Conecte-se à rede Wi-Fi
 
 - Após a inicialização, ative a conexão Wi-Fi com os seguintes comandos:
-  ```shell
+  ```bash
   iwctl
   device list
   adapter [nome_do_adaptador] set-property Powered on
