@@ -103,4 +103,4 @@ Programas adicionais que utilizo no dia a dia:
 - Node
 - Kooha
 - Scrcpy
-- 
+- nerdfonts
