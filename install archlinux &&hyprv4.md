@@ -1,16 +1,13 @@
-Aqui está o texto markdown reformulado para que fique mais organizado e profissional:
-
-```markdown
 # Guia de Instalação: ArchLinux e Hyprv4
 
 ## Passo 1: Crie um Pendrive de Boot
 
-- Faça o download da versão mais recente do ArchLinux em [https://archlinux.org](https://archlinux.org).
-- Crie um pendrive de boot usando a imagem ISO baixada.
+1. Faça o download da versão mais recente do ArchLinux em [https://archlinux.org](https://archlinux.org).
+2. Crie um pendrive de boot usando a imagem ISO baixada.
 
 ## Passo 2: Inicialize a Partir do Pendrive
 
-- Inicie o computador e pressione a tecla F12 para selecionar a opção de inicialização a partir do pendrive.
+Inicie o computador e pressione a tecla F12 para selecionar a opção de inicialização a partir do pendrive.
 
 ## Passo 3: Conecte-se à Rede Wi-Fi
 
@@ -53,22 +50,7 @@ pacman-key --populate archlinux
 archinstall
 ```
 
-### Passo 8: Durante a instalação, selecione os seguintes programas adicionais para instalar:
-
-- eza
-- tmux
-- neovim
-- alacritty
-- git
-- github-cli
-- genymotion
-- node
-- kooha
-- scrcpy
-- fonts
-- Configurações pessoais
-
-### Passo 9: Escolha as Seguintes Opções Importantes:
+### Passo 8: Escolha as Seguintes Opções Importantes:
 
 - Partição principal: ext4
 - Partição separada para /home: não
@@ -93,7 +75,31 @@ nmcli device wifi connect [nome_da_rede] password [senha_da_rede]
 ping archlinux.org
 ```
 
-Ao seguir este guia passo a passo, você terá o ArchLinux instalado com o ambiente Hyprv4 personalizado e uma conexão Wi-Fi funcionando. Certifique-se de ajustar os nomes das redes e as senhas de acordo com a sua configuração.
-```
+Observação: Verifique se você está na pasta pessoal usando o comando "pwd".
 
-Neste guia, também foi incluído o passo para instalar programas adicionais (genymotion, node, kooha, scrcpy), configurações de fonts e pessoais. Isso deve tornar o guia mais completo e profissional.
+### Passo 9: Configurar o Git e GitHub-cli
+
+1. Configure seu nome no Git: `git config --global user.name "[seu_nome]"`
+2. Configure seu email no Git: `git config --global user.email "[seu_endereco_de_email]"`
+3. Faça login no GitHub-cli: `gh auth login`
+
+### Passo 10: Instalação do Hyprv4
+
+1. Clone o repositório Hyprv4: `git clone https://github.com/SolDoesTech/HyprV4.git`
+2. Navegue até a pasta hyprv4: `cd ~/hyprv4`
+3. Se o script de instalação não estiver executável, torne-o executável com o comando: `chmod +x [nome_do_script]`
+4. Execute o script.
+5. Durante a instalação do script, siga os passos importantes: {
+   - disable wifi powersave? Yes
+   - install the packages? Yes
+   - copy config files? Yes
+   - activate starship shell? Yes
+   - Install Asus ROG software suport? No
+   - digite 'reboot' e pressione "Enter".}
+
+Programas adicionais que utilizo no dia a dia:
+
+- Genymotion
+- Node
+- Kooha
+- Scrcpy
