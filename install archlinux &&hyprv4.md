@@ -85,7 +85,7 @@ Observação: Verifique se você está na pasta pessoal usando o comando "pwd".
 
 ### Passo 10: Instalação do Hyprv4
 
-1. Clone o repositório Hyprv4: `git clone https://github.com/SolDoesTech/HyprV4.git`
+1. Clone o repositório Hyprv4: `git clone https://github.com/RenatoLinard/HyprV4.git`
 2. Navegue até a pasta hyprv4: `cd ~/hyprv4`
 3. Se o script de instalação não estiver executável, torne-o executável com o comando: `chmod +x [nome_do_script]`
 4. Execute o script.
