@@ -97,10 +97,11 @@ Observação: Verifique se você está na pasta pessoal usando o comando "pwd".
    - Install Asus ROG software suport? No
    - digite 'reboot' e pressione "Enter".}
 
-Programas adicionais que utilizo no dia a dia:
+Programas adicionais para instalar depois de finalizar o script:
 
-- Genymotion
-- Node
-- Kooha
-- Scrcpy
-- nerdfonts
+- Fonts (github)
+- Node (sudo pacman -S nodejs npm)
+- My nvim (github)
+- Genymotion (arch AUR)
+- Kooha (arch AUR)
+- Scrcpy (github)
