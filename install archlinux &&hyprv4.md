@@ -57,7 +57,7 @@ archinstall
 - Carregador de inicialização: GRUB (Sim)
 - Perfil pré-programado: Instalação mínima
 - Áudio: Pipewire
-- Pacotes adicionais: eza, tmux, neovim, alacritty, git, github-cli
+- Pacotes adicionais: git
 - Configuração de rede: Use NetworkManager
 - Repositórios adicionais: multilib
 
