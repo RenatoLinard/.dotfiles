@@ -116,7 +116,7 @@ alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
-alias cls='clear'
+alias cls='clear && neofetch'
 alias apt-get='sudo apt-get'
 alias multitail='multitail --no-repeat -c'
 alias freshclam='sudo freshclam'
@@ -601,22 +601,14 @@ export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bi
 
 eval "$(starship init bash)"
 
-#Autojump
-
-if [ -f "/usr/share/autojump/autojump.sh" ]; then
-	. /usr/share/autojump/autojump.sh
-elif [ -f "/usr/share/autojump/autojump.bash" ]; then
-	. /usr/share/autojump/autojump.bash
-else
-	echo "can't found the autojump script"
-fi
 
 ############## Personal's config ##########################
 neofetch
-PATH=$PATH:~/scripts/
 
 
 alias upd='sudo pacman -Syyu'
 alias dev='cd ~/devmedia_Mobile/'
 alias js='cd ~/javascript/'
 alias .tmux='vim .tmux.conf'
+alias temp="du -h /var/cache/pacman/pkg"
+alias clrtemp="sudo paccache -rk1 && sudo pacman -Sc"
