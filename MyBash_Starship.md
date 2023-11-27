@@ -12,27 +12,27 @@ Personalize seu ambiente de linha de comando com o Starship e a paleta de cores 
 
 ```markdown
 format = """
-[╭─](#f6c177)\
-[░▒▓](#eb6f92)\
-[ 𝓡𝓔𝓝󰣇𝓣𝓞 𝓛𝓘𝓝󰣇𝓡𝓓 ](bg:#eb6f92 fg:#191724)\
-[]( fg:#eb6f92)\
-[]( fg:#2f1d2e)\
+[╭─](#ea9d34)\
+[░▒▓](#21202e)\
+[ 𝓡𝓔𝓝󰣇𝓣𝓞 𝓛𝓘𝓝󰣇𝓡𝓓 ](bg:#21202e fg:#eb6f92)\
+[]( fg:#21202e)\
+[]( fg:#403d52)\
 $directory\
-[]( fg:#2f1d2e)\
-[]( fg:#26233a)\
+[]( fg:#403d52)\
+[]( fg:#524f67)\
 $git_branch\
 $git_status\
-[▓▒░](fg:#26233a)\
-\n[](#f6c177)\
+[▓▒░](fg:#524f67)\
+\n[](#ea9d34)\
 \n$character"""
 
 
 [character]
-success_symbol = '[╰─](fg:#f6c177) '
+success_symbol = '[╰─](fg:#ea9d34) '
 error_symbol = '[╰─󰶯](fg:#e02416) '
 
 [directory]
-style = "fg:#eb6f92 bg:#2f1d2e"
+style = "fg:#eb6f92 bg:#403d52"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -46,15 +46,17 @@ home_symbol = " ~"
 
 [git_branch]
 symbol = " "
-style = "bg:#26233a"
-format = '[[ $symbol $branch ](fg:#eb6f92 bg:#26233a)]($style)'
+style = "bg:#524f67"
+format = '[[ $symbol $branch ](fg:#eb6f92 bg:#524f67)]($style)'
 truncation_length = 40
 truncation_symbol = "…/"
 
 [git_status]
-style = "bg:#26233a"
-format = '[[($all_status$ahead_behind )](fg:#eb6f92 bg:#26233a)]($style)'
+style = "bg:#524f67"
+format = '[[($all_status$ahead_behind )](fg:#eb6f92 bg:#524f67)]($style)'
 
 [git_commit]
 commit_hash_length = 4
 tag_symbol = '🔖 '
+
+'''
