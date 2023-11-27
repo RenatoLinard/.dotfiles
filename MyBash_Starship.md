@@ -58,5 +58,3 @@ format = '[[($all_status$ahead_behind )](fg:#eb6f92 bg:#524f67)]($style)'
 [git_commit]
 commit_hash_length = 4
 tag_symbol = '🔖 '
-
-'''
