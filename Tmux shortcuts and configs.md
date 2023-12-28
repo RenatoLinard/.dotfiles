@@ -2,7 +2,7 @@
 
 ## Shortcuts
 
-- Prefix - <C-space>
+- Prefix - `<C-space>`
 
 - Create new window - `prefix + c`
 
