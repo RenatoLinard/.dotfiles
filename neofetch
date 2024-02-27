@@ -1,26 +1,54 @@
-# Source: https://github.com/Chick2D/neofetch-themes/ 
-# Do consider checking out the repository, it has a ton of great configs like this.
-
-# Made by https://github.com/mmsaeed509 (ozozFetch)
-
-# Customization Wiki https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
-
+# See this wiki page for more info:
+# https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
 print_info() {
-        
-    prin "${c1} Sys-Info       "
-    prin "$(color 1) ├────$(color 2)────$(color 3)────$(color 4)────$(color 5)────$(color 6)────$(color 7)────$(color 8)──"
-    info "${c5} ├─  Distro     " distro
-    info "${c5} ├─  Kernel     " kernel
-    info "${c5} ├─  DE/WM      " wm
-    info "${c5} ├─ 󰍛 CPU        " cpu
-    info "${c5} ├─ 󰍹 GPU        " gpu
-    info "${c5} ├─ 󰅐 Up Time    " uptime
-    info "${c5} ├─  SHELL      " shell 
-    prin "$(color 9) └────$(color 10)────$(color 11)────$(color 12)────$(color 13)────$(color 14)────$(color 15)────$(color 16)──"
-    
+
+#    prin "​ ​​ $(color 6)  ​​ ​コンピューター"
+    # prin "$(color 16)┌──────────────────────────────────────────┐"
+
+    info "​ ​ ​​$(color 1)  OS          " distro
+#    info "​ ​​ ​$(color 1)  Host        " model
+    info "​ ​​ ​$(color 1)  Kernel      " kernel
+#    info "​ ​​ ​$(color 1)  Uptime      " uptime
+    info "​ ​​ ​$(color 2)  Packages    " packages
+#    info "​ ​​ ​$(color 2)  Shell       " shell
+    info "​ ​​ ​$(color 2)  Resolution  " resolution
+    info "​ ​​ ​$(color 3)  DE          " de
+#    info "​ ​​ ​$(color 3) 缾WM          " wm
+#    info "​ ​​ ​$(color 12)  WM Theme    " wm_theme
+#    info "$(color 13)  Theme       " theme
+#    info "$(color 14)  Icons       " icons
+    info "​ ​​ ​$(color 3)  Terminal    " term
+#    info " Font        " font
+#    info " Terminal Font   " term_font
+
+    # prin "$(color 16)└──────────────────────────────────────────┘"
+    prin " "
+    info "​ ​​ ​​​ $(color 6) " title
+    # prin "$(color 16)┌──────────────────────────────────────────┐"
+
+    info "​ ​​ ​$(color 12)  CPU         " cpu
+    info "​ ​​ ​$(color 12)  GPU         " gpu
+    # info "​ ​​ ​$(color 13)  GPU Driver  " gpu_driver  # Linux/macOS only
+    info "​ ​​ ​$(color 13) ﬙ Memory      " memory
+
+    # info "CPU Usage" cpu_usage
+    # info "Disk" disk
+    # info "Battery" battery
+    # info "Song" song
+    # [[ "$player" ]] && prin "Music Player" "$player"
+    # info "Local IP" local_ip
+    # info "Public IP" public_ip
+    # info "Users" users
+    # info "Locale" locale  # This only works on glibc systems.
+
+    # prin "$(color 16)└──────────────────────────────────────────┘"
+    prin " "
+    prin "​ ​​ ​​ ​​$(color 1)​ ​​ ​​$(color 2)​ ​​ ​​$(color 3)​ ​​ ​​$(color 4)​ ​​ ​​$(color 5)​ ​​ ​​$(color 6)​ ​​ ​​$(color 7)​ ​​ ​​$(color 8)​ ​​ ​​$(color 16)"
+
 }
 
-##--------- Title
+# Title
+
 
 # Hide/Show Fully qualified domain name.
 #
@@ -30,7 +58,8 @@ print_info() {
 title_fqdn="off"
 
 
-##--------- Kernel
+# Kernel
+
 
 # Shorten the output of the kernel function.
 #
@@ -42,10 +71,11 @@ title_fqdn="off"
 # Example:
 # on:  '4.8.9-1-ARCH'
 # off: 'Linux 4.8.9-1-ARCH'
-kernel_shorthand="off"
+kernel_shorthand="on"
 
 
-##--------- Distro
+# Distro
+
 
 # Shorten the output of the distro function
 #
@@ -65,10 +95,11 @@ distro_shorthand="off"
 # Example:
 # on:  'Arch Linux x86_64'
 # off: 'Arch Linux'
-os_arch="off"
+os_arch="on"
 
 
-##--------- Uptime
+# Uptime
+
 
 # Shorten the output of the uptime function
 #
@@ -83,7 +114,8 @@ os_arch="off"
 uptime_shorthand="on"
 
 
-##--------- Memory
+# Memory
+
 
 # Show memory pecentage in output.
 #
@@ -109,7 +141,8 @@ memory_percent="off"
 memory_unit="mib"
 
 
-##--------- Packages
+# Packages
+
 
 # Show/Hide Package Manager names.
 #
@@ -124,7 +157,8 @@ memory_unit="mib"
 package_managers="on"
 
 
-##--------- Shell
+# Shell
+
 
 # Show the path to $SHELL
 #
@@ -149,7 +183,8 @@ shell_path="off"
 shell_version="on"
 
 
-##--------- CPU
+# CPU
+
 
 # CPU speed type
 #
@@ -193,7 +228,7 @@ cpu_brand="on"
 # Example:
 # on:  'Intel i7-6500U (4) @ 3.1GHz'
 # off: 'Intel i7-6500U (4)'
-cpu_speed="off"
+cpu_speed="on"
 
 # CPU Cores
 # Display CPU cores in output
@@ -207,7 +242,7 @@ cpu_speed="off"
 # logical:  'Intel i7-6500U (4) @ 3.1GHz' (All virtual cores)
 # physical: 'Intel i7-6500U (2) @ 3.1GHz' (All physical cores)
 # off:      'Intel i7-6500U @ 3.1GHz'
-cpu_cores="off"
+cpu_cores="logical"
 
 # CPU Temperature
 # Hide/Show CPU temperature.
@@ -227,7 +262,8 @@ cpu_cores="off"
 cpu_temp="off"
 
 
-##--------- GPU
+# GPU
+
 
 # Enable/Disable GPU Brand
 #
@@ -257,10 +293,11 @@ gpu_brand="on"
 #
 # integrated:
 #   GPU1: Intel Integrated Graphics
-gpu_type="dedicated"
+gpu_type="all"
 
 
-##--------- Resolution
+# Resolution
+
 
 # Display refresh rate next to each monitor
 # Default: 'off'
@@ -274,7 +311,8 @@ gpu_type="dedicated"
 refresh_rate="off"
 
 
-##--------- Gtk Theme / Icons / Font
+# Gtk Theme / Icons / Font
+
 
 # Shorten output of GTK Theme / Icons / Font
 #
@@ -286,6 +324,7 @@ refresh_rate="off"
 # on:  'Numix, Adwaita'
 # off: 'Numix [GTK2], Adwaita [GTK3]'
 gtk_shorthand="off"
+
 
 # Enable/Disable gtk2 Theme / Icons / Font
 #
@@ -310,7 +349,8 @@ gtk2="on"
 gtk3="on"
 
 
-##--------- IP Address
+# IP Address
+
 
 # Website to ping for the public IP
 #
@@ -326,7 +366,9 @@ public_ip_host="http://ident.me"
 # Flag:    --ip_timeout
 public_ip_timeout=2
 
+
 # Desktop Environment
+
 
 # Show Desktop Environment version
 #
@@ -336,7 +378,8 @@ public_ip_timeout=2
 de_version="on"
 
 
-##--------- Disk
+# Disk
+
 
 # Which disks to display.
 # The values can be any /dev/sdXX, mount point or directory.
@@ -393,7 +436,8 @@ disk_subtitle="mount"
 disk_percent="on"
 
 
-##--------- Song
+# Song
+
 
 # Manually specify a music player.
 #
@@ -477,7 +521,8 @@ song_shorthand="off"
 mpc_args=()
 
 
-##--------- Text Colors
+# Text Colors
+
 
 # Text Colors
 #
@@ -491,10 +536,11 @@ mpc_args=()
 # Example:
 # colors=(distro)      - Text is colored based on Distro colors.
 # colors=(4 6 1 8 8 6) - Text is colored in the order above.
-colors=(1 2 3 4 5 6 7 8)
+colors=(distro)
 
 
-##--------- Text Options
+# Text Options
+
 
 # Toggle bold text
 #
@@ -515,7 +561,8 @@ underline_enabled="on"
 # Default:  '-'
 # Values:   'string'
 # Flag:     --underline_char
-underline_char="󰍴"
+underline_char="-"
+
 
 # Info Separator
 # Replace the default separator with the specified string.
@@ -529,7 +576,8 @@ underline_char="󰍴"
 separator=":"
 
 
-##--------- Color Blocks
+# Color Blocks
+
 
 # Color block range
 # The range of colors to print.
@@ -582,7 +630,8 @@ block_height=1
 # col_offset=7      - Leave 7 spaces then print the colors
 col_offset="auto"
 
-##--------- Progress Bars
+# Progress Bars
+
 
 # Bar characters
 #
@@ -624,6 +673,7 @@ bar_length=15
 bar_color_elapsed="distro"
 bar_color_total="distro"
 
+
 # Info display
 # Display a bar with the info.
 #
@@ -645,7 +695,8 @@ battery_display="off"
 disk_display="off"
 
 
-##--------- Backend Settings
+# Backend Settings
+
 
 # Image backend.
 #
@@ -667,10 +718,11 @@ image_backend="ascii"
 # NOTE: 'auto' will pick the best image source for whatever image backend is used.
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
-image_source="auto"
+image_source=$(find $HOME/.config/neofetch/pngs/arch.png)
 
 
-##--------- Ascii Options
+# Ascii Options
+
 
 # Ascii distro
 # Which distro's ascii art to display.
@@ -718,7 +770,7 @@ image_source="auto"
 #       Slackware, SunOS, LinuxLite, OpenSUSE, Raspbian,
 #       postmarketOS, and Void have a smaller logo variant.
 #       Use '{distro name}_small' to use the small variants.
-ascii_distro="arch_small"
+ascii_distro="Arch_small"
 
 # Ascii Colors
 #
@@ -729,7 +781,7 @@ ascii_distro="arch_small"
 # Example:
 # ascii_colors=(distro)      - Ascii is colored based on Distro colors.
 # ascii_colors=(4 6 1 8 8 6) - Ascii is colored using these colors.
-ascii_colors=(1 2 3 4 5 6 7 8)
+ascii_colors=(1 2 3 4 5 6 7 8 9)
 
 # Bold ascii logo
 # Whether or not to bold the ascii logo.
@@ -740,7 +792,8 @@ ascii_colors=(1 2 3 4 5 6 7 8)
 ascii_bold="on"
 
 
-##--------- Image Options
+# Image Options
+
 
 # Image loop
 # Setting this to on will make neofetch redraw the image constantly until
@@ -774,7 +827,7 @@ crop_mode="normal"
 # Values:   'northwest', 'north', 'northeast', 'west', 'center'
 #           'east', 'southwest', 'south', 'southeast'
 # Flag:     --crop_offset
-crop_offset="center"
+crop_offset="northwest"
 
 # Image size
 # The image is half the terminal width by default.
@@ -783,14 +836,14 @@ crop_offset="center"
 # Values:  'auto', '00px', '00%', 'none'
 # Flags:   --image_size
 #          --size
-image_size="auto"
+image_size="270px"
 
 # Gap between image and text
 #
 # Default: '3'
 # Values:  'num', '-num'
 # Flag:    --gap
-gap=2
+gap=8
 
 # Image offsets
 # Only works with the w3m backend.
@@ -800,7 +853,7 @@ gap=2
 # Flags:   --xoffset
 #          --yoffset
 yoffset=0
-xoffset=0
+xoffset=2
 
 # Image background color
 # Only works with the w3m backend.
@@ -811,7 +864,7 @@ xoffset=0
 background_color=
 
 
-##--------- Misc Options
+# Misc Options
 
 # Stdout mode
 # Turn off all colors and disables image backend (ASCII/Image).
