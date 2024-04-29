@@ -66,7 +66,7 @@ archinstall
 1. Use o comando "nmcli" para se conectar à rede Wi-Fi com o nome e a senha corretos:
 
 ```shell
-nmcli device wifi connect [nome_da_rede] password [senha_da_rede]
+nmtui
 ```
 
 2. Verifique a conectividade com a internet usando o comando "ping":
