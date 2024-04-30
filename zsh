@@ -1,5 +1,10 @@
+# ZSH INSTALL
 
-``` zsh
+1. sudo pacman -S zsh
+2. sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+3. 
+
+```zsh
 ### Personal Config #####
 
 # Set the default editor
