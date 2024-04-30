@@ -2,7 +2,17 @@
 
 1. sudo pacman -S zsh
 2. sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-3. 
+3. git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+4. git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+5. git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+6. plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  fzf
+)
+7. ```git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k```
+8. ```ZSH_THEME="powerlevel10k/powerlevel10k"```
 
 ```zsh
 ### Personal Config #####
