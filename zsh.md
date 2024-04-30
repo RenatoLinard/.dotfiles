@@ -11,8 +11,9 @@
   zsh-autosuggestions
   fzf
 )
-7. ```bash git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k```
-8. ```bash ZSH_THEME="powerlevel10k/powerlevel10k"```
+7. git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+8. ZSH_THEME="powerlevel10k/powerlevel10k"
+9. p10k configure
 
 ```zsh
 ### Personal Config #####
