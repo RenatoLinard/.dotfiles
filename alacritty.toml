@@ -6,7 +6,8 @@ opacity = 0.7
 
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+#family = "FiraCode Nerd Font"
+#family = "Hack Nerd Font Mono"
 style = "Regular"
 
 [[keyboard.bindings]]
