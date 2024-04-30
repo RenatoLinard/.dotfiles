@@ -5,13 +5,14 @@
 3. git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 4. git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 5. git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-6. plugins=(
+6. git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+7. plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
   fzf
 )
-7. git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 8. ZSH_THEME="powerlevel10k/powerlevel10k"
 9. p10k configure
 
