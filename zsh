@@ -1,5 +1,5 @@
 
-´´´zsh
+``` zsh
 ### Personal Config #####
 
 # Set the default editor
@@ -153,4 +153,4 @@ alias js='cd ~/javascript/'
 alias .tmux='vim .tmux.conf'
 alias temp="du -h /var/cache/pacman/pkg"
 alias clstemp="sudo paccache -rk1 && sudo pacman -Sc"
-´´´
+```
