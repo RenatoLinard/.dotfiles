@@ -44,16 +44,16 @@ $line_break$character"""
 palette = 'gruvbox_dark'
 
 [palettes.gruvbox_dark]
-color_fg0 = '#d6b9a3'
-color_bg1 = '#201e26'
-color_bg3 = '#5b5464'
-color_blue = '#70595a'
-color_aqua = '#91899c'
-color_green = '#a0422d'
-color_orange = '#4f4349'
-color_purple = '#929597'
-color_red = '#5b5c5b'
-color_yellow = '#929597'
+color_fg0 = '#8c8c9c'  # manatee
+color_bg1 = '#1d1922'  # bastille
+color_bg3 = '#1d1922'  # oslo-gray
+color_blue = '#6a4e4c'  # ferra
+color_aqua = '#d3b49e'  # eunry
+color_green = '#6b6068'  # scorpion
+color_orange = '#964137'  # el-salva
+color_purple = '#4b424b'  # emperor
+color_red = '#545c5b'  # corduroy
+color_yellow = '#4b424b'  # emperor
 
 [os]
 disabled = false
