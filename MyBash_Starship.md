@@ -8,7 +8,7 @@ Neste arquivo, você encontrará as configurações necessárias para definir a 
 
 Personalize seu ambiente de linha de comando com o Starship e a paleta de cores Rose Pine e aproveite um terminal elegante e funcional que reflete o seu estilo pessoal. Sinta-se à vontade para ajustar as configurações conforme suas preferências para criar uma experiência de linha de comando única.
 
-![Mybash_custom](https://github.com/RenatoLinard/wallpaper/blob/main/screen_bash.png)
+![Mybash_custom](https://github.com/RenatoLinard/wallpaper/blob/main/screenshot-20240511-015748.png)
 
 ```markdown
 "$schema" = 'https://starship.rs/config-schema.json'
