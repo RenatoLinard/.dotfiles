@@ -53,13 +53,9 @@ alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
-alias cls='clear && neofetch && lh'
-alias apt-get='sudo apt-get'
-alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
+alias cls='clear && neofetch'
 alias vi='nvim'
 alias svi='sudo vi'
-alias vis='nvim "+set si"'
 
 # Change directory aliases
 alias ~='cd ~'
@@ -165,8 +161,7 @@ neofetch
 
 
 alias upd='sudo pacman -Syyu'
-alias dev='cd ~/devmedia_Mobile/'
-alias js='cd ~/javascript/'
+alias vm='vmware ~/vmware/win11/win11.vmx -x -X'
 alias .tmux='vim .tmux.conf'
 alias temp="du -h /var/cache/pacman/pkg"
 alias clstemp="sudo paccache -rk1 && sudo pacman -Sc"
