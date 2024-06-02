@@ -21,76 +21,23 @@ export EDITOR=nvim
 # ALIASES
 # -----------------------------------------------------
 
-alias c='clear'
-alias nf='neofetch'
-alias pf='pfetch'
-alias ls='eza -a --icons'
-alias ll='eza -al --icons'
-alias lt='eza -a --tree --level=1 --icons'
 alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
 alias vim='$EDITOR'
-alias ts='~/dotfiles/scripts/snapshot.sh'
-alias matrix='cmatrix'
 alias wifi='nmtui'
-alias od='~/private/onedrive.sh'
 alias rw='~/dotfiles/waybar/reload.sh'
-alias winclass="xprop | grep 'CLASS'"
 alias dot="cd ~/dotfiles"
 alias cleanup='~/dotfiles/scripts/cleanup.sh'
 alias ml4w='~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage'
 alias ml4w-settings='~/dotfiles/apps/ML4W_Dotfiles_Settings-x86_64.AppImage'
 
 # -----------------------------------------------------
-# Window Managers
-# -----------------------------------------------------
-
-alias Qtile='startx'
-# Hyprland with Hyprland
-
-# -----------------------------------------------------
-# GIT
-# -----------------------------------------------------
-
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m"
-alias gp="git push"
-alias gpl="git pull"
-alias gst="git stash"
-alias gsp="git stash; git pull"
-alias gcheck="git checkout"
-alias gcredential="git config credential.helper store"
-
-# -----------------------------------------------------
-# SCRIPTS
-# -----------------------------------------------------
-
-alias gr='python ~/dotfiles/scripts/growthrate.py'
-alias ChatGPT='python ~/mychatgpt/mychatgpt.py'
-alias chat='python ~/mychatgpt/mychatgpt.py'
-alias ascii='~/dotfiles/scripts/figlet.sh'
 
 # -----------------------------------------------------
 # VIRTUAL MACHINE
 # -----------------------------------------------------
 
-alias vm='~/private/launchvm.sh'
-alias lg='~/dotfiles/scripts/looking-glass.sh'
-
-# -----------------------------------------------------
-# EDIT CONFIG FILES
-# -----------------------------------------------------
-
-alias confq='$EDITOR ~/dotfiles/qtile/config.py'
-alias confp='$EDITOR ~/dotfiles/picom/picom.conf'
-alias confb='$EDITOR ~/dotfiles/.bashrc'
-
-# -----------------------------------------------------
-# EDIT NOTES
-# -----------------------------------------------------
-
-alias notes='$EDITOR ~/notes.txt'
+alias vm='vmware ~/vmware/win11/win11.vmx -x -X'
 
 # -----------------------------------------------------
 # SYSTEM
@@ -100,12 +47,6 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias setkb='setxkbmap de;echo "Keyboard set back to de."'
 
 # -----------------------------------------------------
-# SCREEN RESOLUTINS
-# -----------------------------------------------------
-
-# Qtile
-alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
-alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
 
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
@@ -158,15 +99,9 @@ alias mv='mv -i'
 alias rm='trash -v'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
-alias ping='ping -c 10'
-alias less='less -R'
-alias cls='clear && neofetch && lh'
-alias apt-get='sudo apt-get'
-alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
+alias cls='clear && neofetch'
 alias vi='nvim'
 alias svi='sudo vi'
-alias vis='nvim "+set si"'
 
 # Change directory aliases
 alias ~='cd ~'
@@ -181,19 +116,6 @@ alias bd='cd "$OLDPWD"'
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
-
-# GIT
-# -----------------------------------------------------
-
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m"
-alias gp="git push"
-alias gpl="git pull"
-alias gst="git stash"
-alias gsp="git stash; git pull"
-alias gcheck="git checkout"
-
 
 # Alias's for multiple directory listing commands
 alias la='eza -lah' # show hidden files
@@ -272,13 +194,7 @@ neofetch
 
 
 alias upd='sudo pacman -Syyu'
-alias dev='cd ~/devmedia_Mobile/'
-alias js='cd ~/javascript/'
-alias .tmux='vim .tmux.conf'
-alias temp="du -h /var/cache/pacman/pkg"
 alias clstemp="sudo paccache -rk1 && sudo pacman -Sc"
-alias .bashrc="vim .bashrc"
-alias .alacritty="vim ~/.config/alacritty/alacritty.toml"
 # Ignore case on auto-completion
 # Note: bind used instead of sticking these in .inputrc
 if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi
@@ -286,3 +202,5 @@ if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi
 # Show auto-completion list automatically, without double tab
 if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 export PATH=$PATH:~/scripts
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
