@@ -99,7 +99,7 @@ alias mv='mv -i'
 alias rm='trash -v'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
-alias cls='clear && neofetch'
+alias cls='clear && fastfetch --config examples/13'
 alias vi='nvim'
 alias svi='sudo vi'
 
@@ -190,8 +190,6 @@ pwdtail ()
 }
 
 ############## Personal's config ##########################
-neofetch
-
 
 alias upd='sudo pacman -Syyu'
 alias clstemp="sudo paccache -rk1 && sudo pacman -Sc"
@@ -204,3 +202,17 @@ if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 export PATH=$PATH:~/scripts
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Fastfetch if on wm
+# -----------------------------------------------------
+if [[ $(tty) == *"pts"* ]]; then
+    fastfetch --config examples/13
+else
+    echo
+    if [ -f /bin/qtile ]; then
+        echo "Start Qtile X11 with command Qtile"
+    fi
+    if [ -f /bin/hyprctl ]; then
+        echo "Start Hyprland with command Hyprland"
+    fi
+fi
