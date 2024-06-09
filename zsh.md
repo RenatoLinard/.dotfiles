@@ -53,7 +53,7 @@ alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
-alias cls='clear && neofetch'
+alias cls='clear && fastfetch --config examples/13'
 alias vi='nvim'
 alias svi='sudo vi'
 
@@ -157,12 +157,27 @@ pwdtail ()
 }
 
 ############## Personal's config ##########################
-neofetch
-
 
 alias upd='sudo pacman -Syyu'
 alias vm='vmware ~/vmware/win11/win11.vmx -x -X'
 alias .tmux='vim .tmux.conf'
 alias temp="du -h /var/cache/pacman/pkg"
 alias clstemp="sudo paccache -rk1 && sudo pacman -Sc"
+
+# Fastfetch if on wm
+# -----------------------------------------------------
+if [[ $(tty) == *"pts"* ]]; then
+    fastfetch --config examples/13
+else
+    echo
+    if [ -f /bin/qtile ]; then
+        echo "Start Qtile X11 with command Qtile"
+    fi
+    if [ -f /bin/hyprctl ]; then
+        echo "Start Hyprland with command Hyprland"
+    fi
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
